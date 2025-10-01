@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ui_project/core/utils/app_colors.dart';
+import 'package:ui_project/core/utils/text_styles.dart';
 
 class AnimeCard extends StatelessWidget {
   const AnimeCard({super.key, required this.width, required this.imagePath});
@@ -30,14 +31,7 @@ class AnimeCard extends StatelessWidget {
               ),
             ),
             SizedBox(height: 4),
-            Text(
-              "Mystery",
-              style: TextStyle(
-                color: AppColors.lightGrayColor,
-                fontSize: 12,
-                fontWeight: FontWeight.w400,
-              ),
-            ),
+            Text("Mystery", style: TextStyles.subTitleThickGray12),
           ],
         ),
         // decoration: BoxDecoration(color: AppColors.primaryColor),

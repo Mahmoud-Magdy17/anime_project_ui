@@ -15,7 +15,7 @@ class AnimeCards extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 408,
+      height: 320,
       width: double.infinity,
       child: CustomScrollView(
         scrollDirection: Axis.horizontal,

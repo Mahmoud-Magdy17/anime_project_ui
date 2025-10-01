@@ -7,4 +7,5 @@ abstract class AppColors {
   static const whiteColor = Color(0xffffffff);
   static const lightGrayColor = Color(0xffA9A9A9);
   static const transparent = Color(0x00ffffff);
+  static const blackColor = Color(0xff000000);
 }
