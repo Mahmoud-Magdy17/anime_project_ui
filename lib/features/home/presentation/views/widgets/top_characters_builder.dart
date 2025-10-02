@@ -20,20 +20,5 @@ class TopCharactersBuilder extends StatelessWidget {
       },
       itemCount: topCharacters.length,
     );
-    // return CustomScrollView(
-    //   scrollDirection: Axis.horizontal,
-    //   slivers: buildTopCoaracterCardsList(topCharacters),
-    // );
   }
-
-  // List<TopCharacterCard> buildTopCoaracterCardsList(
-  //   List<TopCharacterEntity> characters,
-  // ) {
-  //   List<TopCharacterCard> characterCardsList = [];
-  //   for (var character in characters) {
-  //     characterCardsList.add();
-  //   }
-
-  //   return characterCardsList;
-  // }
 }

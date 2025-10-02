@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ui_project/features/anime/domain/entities/anime_all_details.dart';
-import 'package:ui_project/features/home/data/repo_impl/top_animies_repo/top_animies_repo_impl.dart';
-
+import '../../../data/repo_impl/top_animies_repo_impl.dart';
 import 'anime_cards_list_view_builder.dart';
 
 class AnimeCards extends StatelessWidget {
@@ -21,7 +20,10 @@ class AnimeCards extends StatelessWidget {
       child: SizedBox(
         height: 320,
         width: double.infinity,
-        child: AnimeCardsListViewBuilder(screenWidth: screenWidth, animies: animies),
+        child: AnimeCardsListViewBuilder(
+          screenWidth: screenWidth,
+          animies: animies,
+        ),
       ),
     );
   }
