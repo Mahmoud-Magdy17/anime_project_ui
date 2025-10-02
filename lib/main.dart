@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'core/utils/custom_scaffold.dart';
+import 'core/utils/custom_home_scaffold.dart';
 
 void main() {
   runApp(const AnimeApp());
@@ -12,7 +12,7 @@ class AnimeApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: CustomScaffold(),
+      home: CustomHomeScaffold(),
       debugShowCheckedModeBanner: false,
     );
   }

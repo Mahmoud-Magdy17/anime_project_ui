@@ -3,14 +3,14 @@ import 'package:flutter_svg/svg.dart';
 import 'package:ui_project/features/home/presentation/views/home_view.dart';
 import 'package:ui_project/core/utils/custom_buttom_navigation_bar.dart';
 
-class CustomScaffold extends StatefulWidget {
-  const CustomScaffold({super.key});
+class CustomHomeScaffold extends StatefulWidget {
+  const CustomHomeScaffold({super.key});
 
   @override
-  State<CustomScaffold> createState() => _CustomScaffoldState();
+  State<CustomHomeScaffold> createState() => _CustomHomeScaffoldState();
 }
 
-class _CustomScaffoldState extends State<CustomScaffold> {
+class _CustomHomeScaffoldState extends State<CustomHomeScaffold> {
   int selectedItem = 0;
 
   // هنا بتحدد ال views اللي هتتنقل بينهم
