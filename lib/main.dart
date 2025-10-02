@@ -11,6 +11,9 @@ class AnimeApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: CustomScaffold());
+    return MaterialApp(
+      home: CustomScaffold(),
+      debugShowCheckedModeBanner: false,
+    );
   }
 }

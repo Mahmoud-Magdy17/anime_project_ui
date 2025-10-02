@@ -1,14 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:ui_project/core/utils/app_colors.dart';
 import 'package:ui_project/core/utils/text_styles.dart';
+import 'package:ui_project/features/anime/domain/entities/anime_all_details.dart';
+import 'package:ui_project/features/anime/presentation/views/anime_view.dart';
 
 class AnimeCard extends StatelessWidget {
-  const AnimeCard({super.key, required this.width, required this.imagePath});
+  const AnimeCard({super.key, required this.width, required this.animeDetails});
   final double width;
-  final String imagePath;
+  final AnimeAllDetails animeDetails;
   @override
   Widget build(BuildContext context) {
-    return SliverToBoxAdapter(
+    return InkWell(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) {
+              return AnimeView(animeAllDetails: animeDetails);
+            },
+          ),
+        );
+      },
       child: SizedBox(
         width: width,
         child: Column(
@@ -19,11 +31,15 @@ class AnimeCard extends StatelessWidget {
                 borderRadius: BorderRadius.circular(12),
               ),
 
-              child: Image.asset(imagePath, height: 260, fit: BoxFit.fill),
+              child: Image.asset(
+                animeDetails.animeImagePath,
+                height: 260,
+                fit: BoxFit.fill,
+              ),
             ),
             SizedBox(height: 8),
             Text(
-              "Detective Conan",
+              animeDetails.animeName,
               style: TextStyle(
                 color: AppColors.darkPrimaryColor,
                 fontSize: 14,
@@ -31,10 +47,12 @@ class AnimeCard extends StatelessWidget {
               ),
             ),
             SizedBox(height: 4),
-            Text("Mystery", style: TextStyles.subTitleThickGray12),
+            Text(
+              animeDetails.animeCategory[0],
+              style: TextStyles.subTitleThickGray12,
+            ),
           ],
         ),
-        // decoration: BoxDecoration(color: AppColors.primaryColor),
       ),
     );
   }
