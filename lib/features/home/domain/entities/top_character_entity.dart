@@ -8,5 +8,4 @@ class TopCharacterEntity {
     required this.characterName,
     required this.characterAnime,
   });
-  
 }
