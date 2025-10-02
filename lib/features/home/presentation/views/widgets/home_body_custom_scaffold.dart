@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
+import 'custom_buttom_navigation_bar.dart';
+
 class HomeBodyCustomScaffold extends StatelessWidget {
   const HomeBodyCustomScaffold({super.key, required this.child});
   final Widget child;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: CustomBottomNavigationBar(),
       body: Container(
         height: double.infinity,
         width: double.infinity,
